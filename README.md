@@ -49,18 +49,23 @@ Trang đăng nhập (`login.php`) có sẵn các nút bấm điền nhanh tài k
 
 ---
 
-## 4. Hướng dẫn cài đặt và chạy trên máy (Localhost XAMPP)
+## 4. Hướng dẫn chạy đồ án (Localhost)
 
-1. Khởi động phần mềm **XAMPP**, bật **Apache** và **MySQL**.
-2. Đặt thư mục `do-an-cuoi-ky` vào thư mục `htdocs` của XAMPP:
-   - Trên macOS: `/Applications/XAMPP/xamppfiles/htdocs/do-an-cuoi-ky`
-   - Trên Windows: `C:\xampp\htdocs\do-an-cuoi-ky`
-3. Mở trình duyệt web truy cập địa chỉ:
+1. Mở phần mềm **XAMPP**, bấm Start **MySQL**.
+2. Mở Terminal / CMD tại thư mục dự án và chạy:
+   ```bash
+   ./start-local.sh
    ```
-   http://localhost/do-an-cuoi-ky
+   *(Hoặc chạy lệnh PHP server trực tiếp: `php -S localhost:8000`)*
+3. Mở trình duyệt web truy cập:
    ```
-   *(Hệ thống sẽ tự động tạo cơ sở dữ liệu `do_an_thu_vien` và nạp dữ liệu mẫu ban đầu nếu chưa có).*
-4. Hoặc có thể vào `http://localhost/phpmyadmin`, tạo database `do_an_thu_vien` rồi import file `database/schema_and_seed.sql`.
+   http://localhost:8000
+   ```
+   *(Hệ thống sẽ tự động tạo cơ sở dữ liệu `do_an_thu_vien` và nạp sẵn dữ liệu mẫu nếu chưa có).*
+4. Khi muốn dừng server:
+   ```bash
+   ./stop-local.sh
+   ```
 
 ---
 
